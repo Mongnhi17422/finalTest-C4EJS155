@@ -35,23 +35,41 @@ button {
     background-color: rgb(97, 177, 97);
 }
 
+button:hover {
+    cursor: pointer;
+}
+
 .box {
     width: 200px;
     height: 200px;
-    border: 1px solid #000;
+    border: 2px solid #000;
     margin: 0px 10px;
     text-align: center;
 }
 
+
+
 .box p {
     text-align: left;
     margin-left: 10px;
+    position: relative;
+    top: 10px;
 }
 
 .run {
     width: 1300px;
     margin: 0px auto;
     justify-content: flex-end;
+}
+
+.a-choice {
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    
+}
+
+.a-choice:hover {
+    transform: scale(1.1);
 }
 
 .note-and-reset {
