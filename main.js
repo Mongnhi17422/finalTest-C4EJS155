@@ -95,7 +95,10 @@ function checkResult() {
     playerBets.forEach(bet => {
         const { image, count } = bet;
         const imageName = image.split('/').pop().split('.')[0]; 
-        if (results.includes(image)) {
+        
+        const occurrences = results.filter(result => result === image).length;
+    
+        if (occurrences === count) {
             correctBets.push(`${imageName} ${count}`);
         } else {
             incorrectBets.push(`${imageName} ${count}`);
